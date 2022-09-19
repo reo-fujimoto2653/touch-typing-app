@@ -33,13 +33,56 @@ html {
 }
 
 .start-modal {
+    display: none;
     height: 100vh;
     position: fixed;
     top: 0;
     width: 100%;
 }
 
-.start-modal-background {
+.introduction-modal {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.button{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #543618;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #eeee;
+    border-radius: 50px;
+    border: 0.2rem solid #543618;
+    box-shadow: 0.2rem 0.2rem 0px 0.1rem #cccccc;
+}
+.button:hover {
+  transform: translate3d(0.2rem, 0.2rem, 0);
+  box-shadow: none;
+  opacity: 1;
+  transition: all 0.2s;
+}
+.button:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-top: 3px solid #543618;
+    border-right: 3px solid #543618;
+    transform: rotate(45deg) translateY(-50%);
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    border-radius: 1px;
+    transition: 0.3s ease-in-out;
+}
+.modal-background {
     background: rgba(0, 0, 0, 0.8);
     height: 100vh;
     position: absolute;
@@ -60,6 +103,19 @@ html {
 
 }
 
+.introduction-modal-content{
+    background: #fff;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    width: 60%;
+    /*transformでモーダルの中心点を起点にし、
+    top,leftでモーダル自体を画面の真ん中に持ってくる    */
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
 .modal-content h2 {
     text-align: center;
 }
@@ -69,12 +125,12 @@ html {
     font-weight: 200;
 }
 
-ul {
+.start-modal ul {
     list-style: none;
     padding: 0;
 }
 
-li {
+.chosenLine {
     border: 1px solid gray;
     height: 40px;
     width: 150px;
@@ -87,7 +143,11 @@ li {
     border-radius: 20px;
 }
 
-li:hover {
+.start-modal ul li {
+    margin-top: 10px;
+}
+
+.chosenLine:hover {
     background: aqua;
 }
 
@@ -99,12 +159,12 @@ li:hover {
     width: 100%;
 }
 
-.result-modal-background {
+/* .modal-background {
     background: rgba(0, 0, 0, 0.8);
     height: 100vh;
     position: absolute;
     width: 100%;
-}
+} */
 
 .result-modal-content {
     background: #fff;

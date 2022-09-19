@@ -107,22 +107,35 @@
         <div class="finger little" id="little_right"></div>
     </div>
 
+    <div class="introduction-modal js-introduction-modal">        
+        <div class="modal-background"></div>
+        <div class="introduction-modal-content js-introduction-modal-content">
+            <h2>始める前に...</h2>
+            <h3>指にキーの場所を覚えさせるために次のことを守ってください</h3>
+            <ul>
+                <li>キーを打つたびに必ずホームポジションに戻る！</li>
+                <li>キーボードを見ない！</li>
+            </ul>
+            <div class="button js-start-button">スタート</div>
+        </div>
+    </div>
+
     <div class="start-modal js-start-modal">
-        <div class="start-modal-background"></div>
+        <div class="modal-background"></div>
         <div class="modal-content start-modal-content">
             <h2>列ごとの練習</h2>
             <p>練習する列を選択してください</p>
             <ul>
-                <li class="chosenLine" value="line1Mode">１段目</li>
-                <li class="chosenLine" value="line2Mode">２段目</li>
-                <li class="chosenLine" value="line3Mode">３段目</li>
-                <li class="chosenLine" value="line4Mode">全段</li>
+                <li class="button js-chosenLine" value="line1Mode">１段目</li>
+                <li class="button js-chosenLine" value="line2Mode">２段目</li>
+                <li class="button js-chosenLine" value="line3Mode">３段目</li>
+                <li class="button js-chosenLine" value="line4Mode">全段</li>
             </ul>
         </div>
     </div>
 
     <div class="result-modal js-result-modal">
-        <div class="result-modal-background"></div>
+        <div class="modal-background"></div>
         <div class="start-modal-content">
             <p id="resultCommnent">苦手なキーは...</p>
             <div class="keyboard" id="result">

@@ -77,7 +77,13 @@ function target(text) {
 }
 
 $(function () {
-    $('.chosenLine').on('click', function () {
+
+    $('.js-start-button').on('click', function(){
+        $('.introduction-modal').fadeOut();
+        $('.start-modal').fadeIn();
+    });
+
+    $('.js-chosenLine').on('click', function () {
         failed = [];
         remaining = undefined;
         line = undefined;
