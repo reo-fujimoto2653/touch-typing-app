@@ -100,7 +100,7 @@ html {
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-
+    border-radius: 20px;
 }
 
 .introduction-modal-content{
@@ -114,6 +114,11 @@ html {
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
+    border-radius: 20px;
+}
+
+.introduction-modal-content h2, h3{
+    margin: 0px 0px 5px 0px;
 }
 
 .modal-content h2 {
@@ -174,6 +179,7 @@ html {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
+    border-radius: 20px;
 }
 
 .result-modal-content p {
