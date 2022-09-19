@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>keyboad</title>
+</head>
+
+<body>
+    <div class="repeatFlg" hidden></div>
+    <div class="playingFlg" hidden></div>
+    <div class="question"></div>
+    <div class="keyboard">
+        <div class="line line1">
+            <div class="key type1 key_1" value="1">1</div>
+            <div class="boxes">
+                <div class="key type1 basic" value="2">2</div>
+                <div class="key type1 basic" value="3">3</div>
+                <div class="key type1 basic" value="4">4</div>
+                <div class="key type1 basic" value="5">5</div>
+                <div class="key type1 basic" value="6">6</div>
+                <div class="key type1 basic" value="7">7</div>
+                <div class="key type1 basic" value="8">8</div>
+                <div class="key type1 basic" value="9">9</div>
+                <div class="key type1 basic" value="0">0</div>
+                <div class="key type1 basic" value="-">-</div>
+                <div class="key type1 basic" value="^">^</div>
+                <div class="key type1 basic" value="¥">¥</div>
+                <div class="key type1 basic">del</div>
+            </div>
+        </div>
+        <div class="line line2">
+            <div class="key type1 basic">tab</div>
+            <div class="key type1 basic" value="q">q</div>
+            <div class="key type1 basic" value="w">w</div>
+            <div class="key type1 basic" value="e">e</div>
+            <div class="key type1 basic" value="r">r</div>
+            <div class="key type1 basic" value="t">t</div>
+            <div class="key type1 basic" value="y">y</div>
+            <div class="key type1 basic" value="u">u</div>
+            <div class="key type1 basic" value="i">i</div>
+            <div class="key type1 basic" value="o">o</div>
+            <div class="key type1 basic" value="p">p</div>
+            <div class="key type1 basic" value="@">@</div>
+            <div class="key type1 basic" value="[">[</div>
+        </div>
+        <div class=" type2 enter">
+            <div class="key clip">enter</div>
+        </div>
+        <div class="line line3">
+            <div class="key type1 ctr">ctr</div>
+            <div class="key type1 basic" value="a">a</div>
+            <div class="key type1 basic" value="s">s</div>
+            <div class="key type1 basic" value="d">d</div>
+            <div class="key type1 basic" value="f">f</div>
+            <div class="key type1 basic" value="g">g</div>
+            <div class="key type1 basic" value="h">h</div>
+            <div class="key type1 basic" value="j">j</div>
+            <div class="key type1 basic" value="k">k</div>
+            <div class="key type1 basic" value="l">l</div>
+            <div class="key type1 basic" value=";">;</div>
+            <div class="key type1 basic" value=":">:</div>
+            <div class="key type1 basic" value="]">]</div>
+        </div>
+
+        <div class="line line4">
+            <div class="key type1 shift" value="">shift</div>
+            <div class="boxes">
+                <div class="key type1 basic" value="z">z</div>
+                <div class="key type1 basic" value="x">x</div>
+                <div class="key type1 basic" value="c">c</div>
+                <div class="key type1 basic" value="v">v</div>
+                <div class="key type1 basic" value="b">b</div>
+                <div class="key type1 basic" value="n">n</div>
+                <div class="key type1 basic" value="m">m</div>
+                <div class="key type1 basic" value=",">,</div>
+                <div class="key type1 basic" value=".">.</div>
+                <div class="key type1 basic" value="/">/</div>
+                <div class="key type1 basic" value="_">_</div>
+            </div>
+            <div class="key type1 shift">shift</div>
+        </div>
+        <div class="line line5">
+            <div class="key type1 basic"></div>
+            <div class="key type1 basic"></div>
+            <div class="key type1 basic"></div>
+            <div class="key type1 basic"></div>
+            <div class="key type1 space">space</div>
+            <div class="key type1 basic"></div>
+            <div class="key type1 basic"></div>
+            <div class="key type1 basic"></div>
+        </div>
+    </div>
+
+    <div id="hands">
+        <div class="finger little" id="little_left"></div>
+        <div class="finger ring" id="ring_left"></div>
+        <div class="finger middle" id="middle_left"></div>
+        <div class="finger index" id="index_left"></div>
+        <div class="finger thumb" id="thumb_left"></div>
+        <div class="finger thumb" id="thumb_right"></div>
+        <div class="finger index" id="index_right"></div>
+        <div class="finger middle" id="middle_right"></div>
+        <div class="finger ring" id="ring_right"></div>
+        <div class="finger little" id="little_right"></div>
+    </div>
+
+    <div class="start-modal js-start-modal">
+        <div class="start-modal-background"></div>
+        <div class="modal-content start-modal-content">
+            <h2>列ごとの練習</h2>
+            <p>練習する列を選択してください</p>
+            <ul>
+                <li class="chosenLine" value="line1Mode">１段目</li>
+                <li class="chosenLine" value="line2Mode">２段目</li>
+                <li class="chosenLine" value="line3Mode">３段目</li>
+                <li class="chosenLine" value="line4Mode">全段</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="result-modal js-result-modal">
+        <div class="result-modal-background"></div>
+        <div class="start-modal-content">
+            <p id="resultCommnent">苦手なキーは...</p>
+            <div class="keyboard" id="result">
+                <div class="line line1">
+                    <div class="key type1 key_1" value="1">1</div>
+                    <div class="boxes">
+                        <div class="key type1 basic" value="2">2</div>
+                        <div class="key type1 basic" value="3">3</div>
+                        <div class="key type1 basic" value="4">4</div>
+                        <div class="key type1 basic" value="5">5</div>
+                        <div class="key type1 basic" value="6">6</div>
+                        <div class="key type1 basic" value="7">7</div>
+                        <div class="key type1 basic" value="8">8</div>
+                        <div class="key type1 basic" value="9">9</div>
+                        <div class="key type1 basic" value="0">0</div>
+                        <div class="key type1 basic" value="-">-</div>
+                        <div class="key type1 basic" value="^">^</div>
+                        <div class="key type1 basic" value="¥">¥</div>
+                        <div class="key type1 basic">del</div>
+                    </div>
+                </div>
+                <div class="line line2">
+                    <div class="key type1 basic">tab</div>
+                    <div class="key type1 basic" value="q">q</div>
+                    <div class="key type1 basic" value="w">w</div>
+                    <div class="key type1 basic" value="e">e</div>
+                    <div class="key type1 basic" value="r">r</div>
+                    <div class="key type1 basic" value="t">t</div>
+                    <div class="key type1 basic" value="y">y</div>
+                    <div class="key type1 basic" value="u">u</div>
+                    <div class="key type1 basic" value="i">i</div>
+                    <div class="key type1 basic" value="o">o</div>
+                    <div class="key type1 basic" value="p">p</div>
+                    <div class="key type1 basic" value="@">@</div>
+                    <div class="key type1 basic" value="[">[</div>
+                </div>
+                <div class=" type2 enter">
+                    <div class="key clip">enter</div>
+                </div>
+                <div class="line line3">
+                    <div class="key type1 ctr">ctr</div>
+                    <div class="key type1 basic" value="a">a</div>
+                    <div class="key type1 basic" value="s">s</div>
+                    <div class="key type1 basic" value="d">d</div>
+                    <div class="key type1 basic" value="f">f</div>
+                    <div class="key type1 basic" value="g">g</div>
+                    <div class="key type1 basic" value="h">h</div>
+                    <div class="key type1 basic" value="j">j</div>
+                    <div class="key type1 basic" value="k">k</div>
+                    <div class="key type1 basic" value="l">l</div>
+                    <div class="key type1 basic" value=";">;</div>
+                    <div class="key type1 basic" value=":">:</div>
+                    <div class="key type1 basic" value="]">]</div>
+                </div>
+
+                <div class="line line4">
+                    <div class="key type1 shift" value="">shift</div>
+                    <div class="boxes">
+                        <div class="key type1 basic" value="z">z</div>
+                        <div class="key type1 basic" value="x">x</div>
+                        <div class="key type1 basic" value="c">c</div>
+                        <div class="key type1 basic" value="v">v</div>
+                        <div class="key type1 basic" value="b">b</div>
+                        <div class="key type1 basic" value="n">n</div>
+                        <div class="key type1 basic" value="m">m</div>
+                        <div class="key type1 basic" value=",">,</div>
+                        <div class="key type1 basic" value=".">.</div>
+                        <div class="key type1 basic" value="/">/</div>
+                        <div class="key type1 basic" value="_">_</div>
+                    </div>
+                    <div class="key type1 shift">shift</div>
+                </div>
+                <div class="line line5">
+                    <div class="key type1 basic"></div>
+                    <div class="key type1 basic"></div>
+                    <div class="key type1 basic"></div>
+                    <div class="key type1 basic"></div>
+                    <div class="key type1 space">space</div>
+                    <div class="key type1 basic"></div>
+                    <div class="key type1 basic"></div>
+                    <div class="key type1 basic"></div>
+                </div>
+            </div>
+            <a href="" class="js-result-modal-restart">リプレイ</a>
+            <a href="" class="js-result-modal-retry">追い込む</a>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+body,
+html {
+    margin: 0;
+    height: 100%;
+}
+
+.mode-select-modal {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.mode-select-modal {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+
+.mode-select-modal {
+    background: #fff;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    width: 60%;
+    /*transformでモーダルの中心点を起点にし、
+    top,leftでモーダル自体を画面の真ん中に持ってくる    */
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+
+}
+
+.start-modal {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.start-modal-background {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+
+.start-modal-content {
+    background: #fff;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    width: 60%;
+    /*transformでモーダルの中心点を起点にし、
+    top,leftでモーダル自体を画面の真ん中に持ってくる    */
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+
+}
+
+.modal-content h2 {
+    text-align: center;
+}
+
+.modal-content p {
+    text-align: center;
+    font-weight: 200;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid gray;
+    height: 40px;
+    width: 150px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 40px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+li:hover {
+    background: aqua;
+}
+
+.result-modal {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.result-modal-background {
+    background: rgba(0, 0, 0, 0.8);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+}
+
+.result-modal-content {
+    background: #fff;
+    left: 50%;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+
+.result-modal-content p {
+    text-align: center;
+    font-weight: 200;
+}
+
+
+.enter,
+.clip {
+    width: 60px;
+    height: 85px;
+    box-sizing: border-box;
+}
+
+.question {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 80px;
+    width: 100px;
+    border-bottom: 1px solid black;
+}
+
+.keyboard {
+    margin: 0 auto;
+    position: relative;
+    width: 650px;
+    height: 220px;
+}
+
+.enter {
+    position: absolute;
+    top: 45px;
+    right: 5px;
+}
+
+.line {
+    height: 40px;
+    width: 650px;
+    margin-bottom: 5px;
+}
+
+.basic {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+
+
+.key {
+    height: 40px;
+    border: 1px solid black;
+    float: left;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+
+.type1 {
+    height: 40px;
+    border: 1px solid black;
+    float: left;
+    margin-right: 5px;
+    box-sizing: border-box;
+}
+
+.line1 {
+    display: flex;
+}
+
+.key_1 {
+    flex: 1;
+}
+
+.line4 {
+    display: flex;
+}
+
+.boxes {
+    box-sizing: border-box;
+}
+
+.ctr {
+    width: 50px;
+}
+
+.shift {
+    flex: 1;
+}
+
+.space {
+    width: 200px;
+}
+
+.enter {
+    width: 60px;
+    height: 85px;
+    margin: 0 auto;
+    background: black;
+    clip-path: polygon(100% 0,
+            100% 100%,
+            17% 100%,
+            17% 47%,
+            0 47%,
+            0 0);
+}
+
+.clip {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: white;
+    clip-path: polygon(calc(100% - 1px) 1px,
+            calc(100% - 1px) calc(100% - 1px),
+            calc(17% + 1px) calc(100% - 1px),
+            calc(17% + 1px) calc(47% - 1px),
+            1px calc(47% - 1px),
+            1px 1px);
+}
+
+#hands {
+    margin: 0 auto;
+    width: 650px;
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.finger {
+    margin-right: 10px;
+    width: 70%;
+    align-items: flex-end;
+    background-color: gray;
+    -webkit-border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px;
+    -moz-border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px;
+    border-radius: 20px 20px 0px 0px / 20px 20px 0px 0px;
+}
+
+.little {
+    height: 100px;
+}
+
+.ring {
+    height: 130px;
+}
+
+.middle {
+    height: 150px;
+}
+
+.index {
+    height: 130px;
+}
+
+.thumb {
+    height: 70px;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#red {
+    background-color: red;
+}
+
+.js-result-modal-restart {
+    float: left;
+}
+
+.js-result-modal-retry {
+    float: right;
+}
+
+#result {
+    margin-bottom: 50px;
+}
+
+#resultCommnent {
+    font-size: 30px;
+}
